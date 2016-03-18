@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -53021,10 +53021,6 @@ Source: http://www.rohm.com/products/databook/motor/pdf/bd623x_series-e.pdf</des
 <wire x1="2.55" y1="-1.215" x2="2.55" y2="2.535" width="0.127" layer="39"/>
 <wire x1="2.55" y1="2.535" x2="-2.55" y2="2.535" width="0.127" layer="39"/>
 <wire x1="-2.55" y1="2.535" x2="-2.55" y2="-1.215" width="0.127" layer="39"/>
-<wire x1="-2.45" y1="2.85" x2="2.45" y2="2.85" width="0.127" layer="51"/>
-<wire x1="2.45" y1="2.85" x2="2.45" y2="-2.85" width="0.127" layer="51"/>
-<wire x1="2.45" y1="-2.85" x2="-2.45" y2="-2.85" width="0.127" layer="51"/>
-<wire x1="-2.45" y1="-2.85" x2="-2.45" y2="2.85" width="0.127" layer="51"/>
 <rectangle x1="-2.6" y1="-0.75" x2="-2.5" y2="-0.25" layer="51"/>
 <rectangle x1="-2.105" y1="-3.05" x2="-1.705" y2="-2.85" layer="51"/>
 <rectangle x1="-0.835" y1="-3.05" x2="-0.435" y2="-2.85" layer="51"/>
@@ -53046,6 +53042,24 @@ Source: http://www.rohm.com/products/databook/motor/pdf/bd623x_series-e.pdf</des
 <smd name="PAD" x="0" y="0.66" dx="3.75" dy="3.91" layer="1" rot="R270"/>
 <text x="-3.81" y="-2.54" size="1.27" layer="25" rot="R90">&gt;NAME</text>
 <text x="5.08" y="-2.54" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+<wire x1="2.45" y1="-2.85" x2="2.45" y2="-1.2" width="0.127" layer="21"/>
+<wire x1="2.45" y1="2.85" x2="2.45" y2="2.55" width="0.127" layer="21"/>
+<wire x1="2.3" y1="-2.85" x2="2.45" y2="-2.85" width="0.127" layer="21"/>
+<wire x1="-2.45" y1="-2.85" x2="-2.3" y2="-2.85" width="0.127" layer="21"/>
+<wire x1="-2.45" y1="2.85" x2="-2.3" y2="2.85" width="0.127" layer="21"/>
+<wire x1="2.45" y1="2.85" x2="2.3" y2="2.85" width="0.127" layer="21"/>
+<wire x1="-2.45" y1="-2.85" x2="-2.45" y2="-1.2" width="0.127" layer="21"/>
+<wire x1="-2.45" y1="2.85" x2="-2.45" y2="2.55" width="0.127" layer="21"/>
+<wire x1="-2.45" y1="2.55" x2="-2.45" y2="-1.2" width="0.127" layer="51"/>
+<wire x1="2.45" y1="-1.2" x2="2.45" y2="2.55" width="0.127" layer="51"/>
+<wire x1="-1.5" y1="-2.85" x2="-1.05" y2="-2.85" width="0.127" layer="21"/>
+<wire x1="-0.25" y1="-2.85" x2="0.25" y2="-2.85" width="0.127" layer="21"/>
+<wire x1="1.05" y1="-2.85" x2="1.5" y2="-2.85" width="0.127" layer="21"/>
+<wire x1="-1.5" y1="2.85" x2="-1.05" y2="2.85" width="0.127" layer="21"/>
+<wire x1="-0.25" y1="2.85" x2="0.25" y2="2.85" width="0.127" layer="21"/>
+<wire x1="1.05" y1="2.85" x2="1.5" y2="2.85" width="0.127" layer="21"/>
+<wire x1="2.3" y1="2.85" x2="-2.3" y2="2.85" width="0.127" layer="51"/>
+<wire x1="-2.3" y1="-2.85" x2="2.3" y2="-2.85" width="0.127" layer="51"/>
 </package>
 <package name="VNH2SP30">
 <wire x1="-8.6" y1="-8" x2="8.6" y2="-8" width="0.254" layer="51"/>
@@ -53437,6 +53451,63 @@ Source: http://www.rohm.com/products/databook/motor/pdf/bd623x_series-e.pdf</des
 <wire x1="-6" y1="-2.5" x2="1.5" y2="-2.5" width="0.127" layer="51"/>
 <text x="0" y="0.7" size="1.27" layer="51">1</text>
 <text x="-6.5" y="-2.5" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+</package>
+<package name="SOIC16_N">
+<wire x1="-5" y1="2" x2="5" y2="2" width="0.127" layer="21"/>
+<wire x1="5" y1="2" x2="5" y2="-2" width="0.127" layer="21"/>
+<wire x1="5" y1="-2" x2="-5" y2="-2" width="0.127" layer="21"/>
+<wire x1="-5" y1="-2" x2="-5" y2="2" width="0.127" layer="21"/>
+<rectangle x1="-0.885" y1="-3.1" x2="-0.385" y2="-2" layer="51"/>
+<rectangle x1="-0.885" y1="1.98" x2="-0.385" y2="3.08" layer="51"/>
+<smd name="P$1" x="-4.445" y="-2.9" dx="1.27" dy="1.016" layer="1" rot="R270"/>
+<smd name="P$2" x="-3.175" y="-2.9" dx="1.27" dy="1.016" layer="1" rot="R270"/>
+<smd name="P$3" x="-1.905" y="-2.9" dx="1.27" dy="1.016" layer="1" rot="R270"/>
+<smd name="P$4" x="-0.635" y="-2.9" dx="1.27" dy="1.016" layer="1" rot="R270"/>
+<smd name="P$5" x="0.635" y="-2.9" dx="1.27" dy="1.016" layer="1" rot="R270"/>
+<smd name="P$6" x="1.905" y="-2.9" dx="1.27" dy="1.016" layer="1" rot="R270"/>
+<smd name="P$7" x="3.175" y="-2.9" dx="1.27" dy="1.016" layer="1" rot="R270"/>
+<smd name="P$8" x="4.445" y="-2.9" dx="1.27" dy="1.016" layer="1" rot="R270"/>
+<smd name="P$9" x="4.445" y="2.9" dx="1.27" dy="1.016" layer="1" rot="R270"/>
+<smd name="P$10" x="3.175" y="2.9" dx="1.27" dy="1.016" layer="1" rot="R270"/>
+<smd name="P$11" x="1.905" y="2.9" dx="1.27" dy="1.016" layer="1" rot="R270"/>
+<smd name="P$12" x="0.635" y="2.9" dx="1.27" dy="1.016" layer="1" rot="R270"/>
+<smd name="P$13" x="-0.635" y="2.9" dx="1.27" dy="1.016" layer="1" rot="R270"/>
+<smd name="P$14" x="-1.905" y="2.9" dx="1.27" dy="1.016" layer="1" rot="R270"/>
+<smd name="P$15" x="-3.175" y="2.9" dx="1.27" dy="1.016" layer="1" rot="R270"/>
+<smd name="P$16" x="-4.445" y="2.9" dx="1.27" dy="1.016" layer="1" rot="R270"/>
+<circle x="-4.445" y="-1.27" radius="0.3175" width="0.127" layer="21"/>
+<text x="-6.35" y="-3.175" size="1.27" layer="25" rot="R90" align="center-left">&gt;NAME</text>
+<text x="6.35" y="-3.175" size="1.27" layer="27" rot="R90" align="center-left">&gt;VALUE</text>
+<rectangle x1="-4.695" y1="-3.1" x2="-4.195" y2="-2" layer="51"/>
+<rectangle x1="-3.425" y1="-3.1" x2="-2.925" y2="-2" layer="51"/>
+<rectangle x1="-2.155" y1="-3.1" x2="-1.655" y2="-2" layer="51"/>
+<rectangle x1="0.385" y1="-3.1" x2="0.885" y2="-2" layer="51"/>
+<rectangle x1="1.655" y1="-3.1" x2="2.155" y2="-2" layer="51"/>
+<rectangle x1="2.925" y1="-3.1" x2="3.425" y2="-2" layer="51"/>
+<rectangle x1="4.195" y1="-3.1" x2="4.695" y2="-2" layer="51"/>
+<rectangle x1="-4.695" y1="1.98" x2="-4.195" y2="3.08" layer="51"/>
+<rectangle x1="-3.425" y1="1.98" x2="-2.925" y2="3.08" layer="51"/>
+<rectangle x1="-2.155" y1="1.98" x2="-1.655" y2="3.08" layer="51"/>
+<rectangle x1="0.385" y1="1.98" x2="0.885" y2="3.08" layer="51"/>
+<rectangle x1="1.655" y1="1.98" x2="2.155" y2="3.08" layer="51"/>
+<rectangle x1="2.925" y1="1.98" x2="3.425" y2="3.08" layer="51"/>
+<rectangle x1="4.195" y1="1.98" x2="4.695" y2="3.08" layer="51"/>
+</package>
+<package name="R1350N">
+<pad name="!RST" x="-6.35" y="0" drill="1" diameter="1.6764" shape="octagon"/>
+<pad name="&lt;-TX" x="-3.81" y="0" drill="1" diameter="1.6764" shape="octagon"/>
+<pad name="-&gt;RX" x="-1.27" y="0" drill="1" diameter="1.6764" shape="octagon"/>
+<pad name="VCC" x="1.27" y="0" drill="1" diameter="1.6764" shape="octagon"/>
+<pad name="GND" x="3.81" y="0" drill="1" diameter="1.6764" shape="octagon"/>
+<pad name="GND1" x="6.35" y="0" drill="1" diameter="1.6764" shape="octagon"/>
+<wire x1="-7.62" y1="1.27" x2="-7.62" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="-7.62" y1="-1.27" x2="7.62" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="7.62" y1="-1.27" x2="7.62" y2="1.27" width="0.127" layer="21"/>
+<wire x1="7.62" y1="1.27" x2="-7.62" y2="1.27" width="0.127" layer="21"/>
+<wire x1="-11.5" y1="-2" x2="-11.5" y2="27" width="0.127" layer="51"/>
+<wire x1="-11.5" y1="27" x2="11.5" y2="27" width="0.127" layer="51"/>
+<wire x1="11.5" y1="27" x2="11.5" y2="-2" width="0.127" layer="51"/>
+<wire x1="11.5" y1="-2" x2="-11.5" y2="-2" width="0.127" layer="51"/>
 </package>
 </packages>
 <symbols>
@@ -55071,6 +55142,37 @@ Source: http://www.rohm.com/products/databook/motor/pdf/bd623x_series-e.pdf</des
 <text x="2.794" y="-2.4638" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="MOUNT" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
 </symbol>
+<symbol name="2CH_FET_D">
+<wire x1="-10.16" y1="15.24" x2="10.16" y2="15.24" width="0.254" layer="94"/>
+<wire x1="10.16" y1="15.24" x2="10.16" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-15.24" x2="-10.16" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-15.24" x2="-10.16" y2="15.24" width="0.254" layer="94"/>
+<pin name="VIA" x="-12.7" y="12.7" visible="pin" length="short"/>
+<pin name="VIB" x="-12.7" y="7.62" visible="pin" length="short"/>
+<pin name="VDD1" x="-12.7" y="2.54" visible="pin" length="short"/>
+<pin name="GND1" x="-12.7" y="-7.62" visible="pin" length="short"/>
+<pin name="DISABLE" x="-12.7" y="-12.7" visible="pin" length="short"/>
+<pin name="GNDB" x="12.7" y="-12.7" visible="pin" length="short" rot="R180"/>
+<pin name="VOB" x="12.7" y="-7.62" visible="pin" length="short" rot="R180"/>
+<pin name="VDDB" x="12.7" y="-2.54" visible="pin" length="short" rot="R180"/>
+<pin name="GNDA" x="12.7" y="2.54" visible="pin" length="short" rot="R180"/>
+<pin name="VOA" x="12.7" y="7.62" visible="pin" length="short" rot="R180"/>
+<pin name="VDDA" x="12.7" y="12.7" visible="pin" length="short" rot="R180"/>
+<text x="-10.16" y="17.78" size="1.27" layer="95" align="center-left">&gt;NAME</text>
+<text x="-10.16" y="-17.78" size="1.27" layer="96" align="center-left">&gt;VALUE</text>
+</symbol>
+<symbol name="R1350N">
+<pin name="GND" x="10.16" y="-5.08" length="short" rot="R180"/>
+<pin name="VDD" x="10.16" y="5.08" length="short" rot="R180"/>
+<pin name="!RST" x="-10.16" y="-5.08" length="short"/>
+<pin name="-&gt;RX" x="-10.16" y="0" length="short"/>
+<pin name="&lt;-TX" x="-10.16" y="5.08" length="short"/>
+<wire x1="-7.62" y1="7.62" x2="-7.62" y2="-7.62" width="0.1524" layer="94"/>
+<wire x1="-7.62" y1="-7.62" x2="7.62" y2="-7.62" width="0.1524" layer="94"/>
+<wire x1="7.62" y1="-7.62" x2="7.62" y2="7.62" width="0.1524" layer="94"/>
+<wire x1="7.62" y1="7.62" x2="-7.62" y2="7.62" width="0.1524" layer="94"/>
+<text x="-5.08" y="10.16" size="1.778" layer="95">&gt;NAME</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="DUMMY-LQFP100" prefix="IC">
@@ -55769,6 +55871,16 @@ Source: http://www.rohm.com/products/databook/motor/pdf/bd623x_series-e.pdf</des
 <connect gate="G$1" pin="GND" pad="1"/>
 <connect gate="G$1" pin="IN" pad="2 P"/>
 <connect gate="G$1" pin="OUT" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="_AZ1086" package="SOT-223">
+<connects>
+<connect gate="G$1" pin="GND" pad="1"/>
+<connect gate="G$1" pin="IN" pad="3"/>
+<connect gate="G$1" pin="OUT" pad="2 TAB"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -57289,6 +57401,50 @@ Source: http://www.hirose.co.jp/cataloge_hp/e24000019.pdf</description>
 <device name="5.5" package="5,5-PAD">
 <connects>
 <connect gate="G$1" pin="MOUNT" pad="B5,5"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ADUM3223" prefix="U" uservalue="yes">
+<gates>
+<gate name="G$1" symbol="2CH_FET_D" x="0" y="0"/>
+</gates>
+<devices>
+<device name="_SMD" package="SOIC16_N">
+<connects>
+<connect gate="G$1" pin="DISABLE" pad="P$5"/>
+<connect gate="G$1" pin="GND1" pad="P$4"/>
+<connect gate="G$1" pin="GNDA" pad="P$14"/>
+<connect gate="G$1" pin="GNDB" pad="P$9"/>
+<connect gate="G$1" pin="VDD1" pad="P$3 P$8"/>
+<connect gate="G$1" pin="VDDA" pad="P$16"/>
+<connect gate="G$1" pin="VDDB" pad="P$11"/>
+<connect gate="G$1" pin="VIA" pad="P$1"/>
+<connect gate="G$1" pin="VIB" pad="P$2"/>
+<connect gate="G$1" pin="VOA" pad="P$15"/>
+<connect gate="G$1" pin="VOB" pad="P$10"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="R1350N">
+<gates>
+<gate name="G$1" symbol="R1350N" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="R1350N">
+<connects>
+<connect gate="G$1" pin="!RST" pad="!RST"/>
+<connect gate="G$1" pin="-&gt;RX" pad="-&gt;RX"/>
+<connect gate="G$1" pin="&lt;-TX" pad="&lt;-TX"/>
+<connect gate="G$1" pin="GND" pad="GND GND1"/>
+<connect gate="G$1" pin="VDD" pad="VCC"/>
 </connects>
 <technologies>
 <technology name=""/>
