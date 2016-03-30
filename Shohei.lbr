@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -53510,6 +53510,20 @@ Source: http://www.rohm.com/products/databook/motor/pdf/bd623x_series-e.pdf</des
 <wire x1="11.5" y1="27" x2="11.5" y2="-2" width="0.127" layer="51"/>
 <wire x1="11.5" y1="-2" x2="-11.5" y2="-2" width="0.127" layer="51"/>
 </package>
+<package name="CDS">
+<pad name="P$1" x="-1.5" y="0" drill="0.8" shape="octagon"/>
+<pad name="P$2" x="1.5" y="0" drill="0.8" shape="octagon"/>
+<wire x1="-1.5" y1="2.15" x2="1.5" y2="2.15" width="0.127" layer="21"/>
+<wire x1="1.5" y1="-2.15" x2="-1.5" y2="-2.15" width="0.127" layer="21"/>
+<wire x1="-1.5" y1="-2.15" x2="-1.5" y2="2.15" width="0.127" layer="21" curve="-108"/>
+<wire x1="1.5" y1="2.15" x2="1.5" y2="-2.15" width="0.127" layer="21" curve="-108"/>
+</package>
+<package name="2,0-PAD">
+<pad name="P$1" x="0" y="0" drill="2" diameter="3.81"/>
+<circle x="0" y="0" radius="2.54" width="1.016" layer="43"/>
+<circle x="0" y="0" radius="2.54" width="1.016" layer="42"/>
+<circle x="0" y="0" radius="2.54" width="1.016" layer="41"/>
+</package>
 </packages>
 <symbols>
 <symbol name="STM32F429ZX">
@@ -55173,6 +55187,24 @@ Source: http://www.rohm.com/products/databook/motor/pdf/bd623x_series-e.pdf</des
 <wire x1="7.62" y1="-7.62" x2="7.62" y2="7.62" width="0.1524" layer="94"/>
 <wire x1="7.62" y1="7.62" x2="-7.62" y2="7.62" width="0.1524" layer="94"/>
 <text x="-5.08" y="10.16" size="1.778" layer="95">&gt;NAME</text>
+</symbol>
+<symbol name="CDS">
+<pin name="P$1" x="-5.08" y="0" visible="off" length="short"/>
+<pin name="P$2" x="5.08" y="0" visible="off" length="short" rot="R180"/>
+<wire x1="-2.54" y1="0" x2="-2.032" y2="1.016" width="0.1524" layer="94"/>
+<wire x1="-2.032" y1="1.016" x2="-1.016" y2="-1.016" width="0.1524" layer="94"/>
+<wire x1="-1.016" y1="-1.016" x2="0" y2="1.016" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.016" x2="1.016" y2="-1.016" width="0.1524" layer="94"/>
+<wire x1="1.016" y1="-1.016" x2="2.032" y2="1.016" width="0.1524" layer="94"/>
+<wire x1="2.032" y1="1.016" x2="2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.524" y1="2.54" x2="-0.762" y2="1.524" width="0.1524" layer="94"/>
+<wire x1="-0.762" y1="1.524" x2="-1.016" y2="1.524" width="0.1524" layer="94"/>
+<wire x1="-1.016" y1="1.524" x2="-0.762" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="-0.762" y1="1.778" x2="-0.762" y2="1.524" width="0.1524" layer="94"/>
+<wire x1="-0.762" y1="2.54" x2="0" y2="1.524" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.524" x2="-0.254" y2="1.524" width="0.1524" layer="94"/>
+<wire x1="-0.254" y1="1.524" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.778" x2="0" y2="1.524" width="0.1524" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -57407,6 +57439,14 @@ Source: http://www.hirose.co.jp/cataloge_hp/e24000019.pdf</description>
 <technology name=""/>
 </technologies>
 </device>
+<device name="2.0" package="2,0-PAD">
+<connects>
+<connect gate="G$1" pin="MOUNT" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="ADUM3223" prefix="U" uservalue="yes">
@@ -57446,6 +57486,22 @@ Source: http://www.hirose.co.jp/cataloge_hp/e24000019.pdf</description>
 <connect gate="G$1" pin="&lt;-TX" pad="&lt;-TX"/>
 <connect gate="G$1" pin="GND" pad="GND GND1"/>
 <connect gate="G$1" pin="VDD" pad="VCC"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="CDS">
+<gates>
+<gate name="G$1" symbol="CDS" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="CDS">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
 </connects>
 <technologies>
 <technology name=""/>
